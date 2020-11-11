@@ -8,7 +8,7 @@ The goal of this project is to create a Scratch project that connects to a self-
 
 Begin by [creating a new Scratch project](https://scratch.mit.edu/create).  Go to the Variables palette and make two new cloud variables called `Messages` and `Update`.  
 
-![screenshot of cloud variable](docs/image.png)
+![screenshot of cloud variable](docs/Screenshot%202020-11-10%20201415.png)
 
 Then reset the block values when the project is run, like below: 
 

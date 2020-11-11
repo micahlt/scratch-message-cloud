@@ -31,7 +31,7 @@ If you already have Git, then you probably know how to `clone` this project to y
 Here's where NPM comes in.  Open a new terminal or command prompt and use [basic commands](https://www.pluralsight.com/guides/beginner-linux-navigation-manual) to move into the folder where you downloaded those files earlier.  Then run `npm install` to automatically install everything the code needs to run.  
 
 ### Start the server
-To start the server, simply type `node server.js`!
+To start the server, simply type `node server.js`!  Every time you click the green flag, the message count will update.  You can also change the `Update` variable's value if you want to force an update.
 
 ### Bonus: run in background with PM2 (Linux only)
 If you want to run the server in the background without constantly having a terminal window open, install PM2 (which stands for Process Manager 2): 

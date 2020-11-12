@@ -1,0 +1,23 @@
+{
+  "name": "MessageCloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "is-online": "^9.0.0",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2",
+    "request-cookies": "^1.1.0",
+    "scratch-api": "^1.1.11",
+    "string2num": "^1.0.0",
+    "tough-cookie": "^4.0.0",
+    "wait-until": "0.0.2"
+  }
+}

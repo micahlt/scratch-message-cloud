@@ -1,18 +1,25 @@
 var Scratch = require('scratch-api');
 var fetch = require('node-fetch');
 var isOnline = require('is-online');
+var s2n = require('string2num');
 var waitUntil = require('wait-until');
 const fs = require('fs');
-waitUntil(300, Infinity, function condition() {
+var username;
+waitUntil()
+  .interval(300)
+  .times(Infinity)
+  .condition(function () {
     return isOnline();
-}, function done(result) {
+})
+.done(function(result) {
     Scratch.UserSession.create(process.env.SCRATCH_USERNAME, process.env.SCRATCH_PASSWORD, function(err, user) {
         user.cloudSession(process.env.MESSAGECOUNTID, function(err, cloud) {
             cloud.on('set', function(name, value) {
                 if (name == '☁ Update') {
-                    console.log('Update requested...')
+                    console.log('Update requested...');
+                    username = s2n.decode(cloud.get('☁ Username'));
                     cloud.set('☁ Update', 202);
-                    fetch('https://api.scratch.mit.edu/users/' + process.env.SCRATCH_USERNAME + '/messages/count').then((res) => {
+                    fetch('https://api.scratch.mit.edu/users/' + username + '/messages/count').then((res) => {
                         return res.json();
                     }).then((data) => {
                         console.log('API request succeeded...\nUpdating messages to ' + data.count +
@@ -27,7 +34,8 @@ waitUntil(300, Infinity, function condition() {
             setInterval(function() {
                 console.log('Automatic update triggered...');
                 cloud.set('☁ Update', 202);
-                fetch('https://api.scratch.mit.edu/users/' + process.env.SCRATCH_USERNAME + '/messages/count').then((res) => {
+                username = s2n.decode(cloud.get('☁ Username'));
+                fetch('https://api.scratch.mit.edu/users/' + username + '/messages/count').then((res) => {
                     return res.json();
                 }).then((data) => {
                     console.log('API request succeeded...\nUpdating messages to ' + data.count + '...');

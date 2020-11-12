@@ -1,18 +1,12 @@
 ## Goal of the project
 
-The goal of this project is to create a Scratch project that connects to a self-hosted or remote server in order to update the unread message count of your Scratch account.  To do this, you need a **computer** or **Raspberry Pi**, a **[Scratch account](https://scratch.mit.edu/join)** that is not a New Scratcher, **[Node.js](nodejs.org)**, and **[NPM](https://docs.npmjs.com/cli/v6/configuring-npm/install)**.
+The goal of this project is to create a Scratch project that connects to a self-hosted or remote server in order to update the unread message count of the current user of that project.  To do this, you need a **computer** or **Raspberry Pi**, a **[Scratch account](https://scratch.mit.edu/join)** that is not a New Scratcher, **[Node.js](nodejs.org)**, and **[NPM](https://docs.npmjs.com/cli/v6/configuring-npm/install)**.
 
 ## Setup
 
 ### Create the Scratch project
 
-Begin by [creating a new Scratch project](https://scratch.mit.edu/create).  Go to the Variables palette and make two new cloud variables called `Messages` and `Update`.  
-
-![screenshot of cloud variable](docs/Screenshot%202020-11-10%20201415.png)
-
-Then reset the block values when the project is run, like below: 
-
-![Screenshot of setting variables](docs/Screenshot%202020-11-10%20194153.png)
+Begin by [opening the existing Scratch project](https://scratch.mit.edu/projects/447191535/editor/).  Then click the Remix button in the top blue bar.  
 
 ### Set environment variables
 
@@ -20,7 +14,7 @@ If you aren't already on the machine that will be your server, switch over now. 
 
 - `SCRATCH_USERNAME`: your Scratch username
 - `SCRATCH_PASSWORD`: your Scratch password
-- `MESSAGECOUNTID`: the project ID of the saved Scratch project we created earlier (that's the long number at the end of the URL)
+- `MESSAGECOUNTID`: the project ID of the saved Scratch project you remixed earlier (that's the long number at the end of the URL)
 
 ### Get the source code
 

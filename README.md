@@ -8,6 +8,8 @@ The goal of this project is to create a Scratch project that connects to a self-
 
 Begin by [opening the existing Scratch project](https://scratch.mit.edu/projects/447191535/editor/).  Then click the Remix button in the top blue bar.  
 
+![](https://scratch-stats-badge.sid72020123.repl.co/project?id=447191535&data=remixes&style=flat&label=Remixes)
+
 ### Set environment variables
 
 If you aren't already on the machine that will be your server, switch over now.  I highly recommend that you use a Linux-based operating system (Raspberry Pi OS, Ubuntu, Fedora, etc), but Windows will work if it has to.  You'll need to set what are called **environment variables**.  There's a tutorial for Linux OS's [here](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/) and Windows 10 [here](https://www.architectryan.com/2018/08/31/how-to-change-environment-variables-on-windows-10/).  Note that you'll have to be on an admin account to change these.  Here are the vars to set and their values (no need for quotes or anything):
